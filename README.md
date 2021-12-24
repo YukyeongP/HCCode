@@ -15,6 +15,7 @@ ex) System.Printing namespace에는 인쇄 관련 일들만
 * 컴파일: 고급언어에서 저급언어로 번역하는 과정
 * 빌드: 소스코드 파일을 실행할 수 있는 독립 sw 가공물로 변환하는 과정 또는 그에 대한 결과물
 
+
 2. 메모리 영역
 - Code: 소스코드, 기계어로 제어되는 메모리 영역
 - Data: 전역변수, static변수 할당되는 영역, 프로그램 시작과 동시에 할당되고 종료되어야 소멸
@@ -27,6 +28,7 @@ ex) System.Printing namespace에는 인쇄 관련 일들만
 * 값 형식: 값을 변수에 넣는 데이터 형식
 * 참조 형식: 변수에 대한 위치(메모리 위치)를 담는 데이터 형식
 
+
 3. 형변환
 - 문자 -> 숫자: Parse() method 사용
 ex) int a = int.Parse("12345"); float b = float.Parse("123.45");
@@ -34,18 +36,17 @@ ex) string e = "123456"; int f = Convert.ToInt32(e);
 - 숫자 -> 문자: ToString() method 사용
 ex) int c = 12345; string d = c.ToString();
 
+
 4. 클래스 = 복합 데이터 형식
 - 객체 지향 프로그래밍(OOP): 코드 내의 모든 것을 객체로 표현하고자 하는 프로그래밍 패러다임, 
 - OOA / OOD / OOP (analysis, design, programming (language))
 - 객체 지향언어
-
-  1) pure OO 
+  (1) pure OO 
      모든 것이 객체
      Smalltalk, Ruby, squeak
      Alan Kay (Kent Beck, Ward 커닝햄)
      Agile Programming
      Duck Typing
-
    2) C / C++/ C#
 
 - 함수형 언어: 
@@ -83,6 +84,7 @@ ex) class 클래스이름{
 Q. 전역변수 안쓰고 왜 static?
 -> static은 프로그램 종료 전까지 메모리 소멸x = 변수값 그대로 유지
 
+
 6. 접근 한정자 
 - public: 클래스의 내/외부 모든 곳
 - protected: 클래스의 외부 x, 파생 클래스 접근 o
@@ -91,6 +93,7 @@ Q. 전역변수 안쓰고 왜 static?
 - protected internal: 같은 어셈블리에 있는 코드에 대해서만 protected 접근
 
 const한정자, volatile한정자(컴파일러 최적화가 임의로 코드변경하는 것 방지)
+
 
 7. 오버라이딩과 다형성(Polymorphism)
 - 다형성: 객체가 여러 형태를 가질 수 있음을 의미
@@ -108,11 +111,13 @@ ex) namespace 네임스페이스이름 {
 	public static class 클래스이름 {
 		public static  반환형식 메소드이름 ( this 대상형식 식별자, 매개변수목록) } // } }
 
+
 9. 구조체 -> 안씀
 - 구조체는 값 형식, 클래스는 참조 형식
 - 구조체의 인스턴스는 스택에 할당되고 메모리에서 사라짐
 - new 연산자를 사용하지 않아도 인스턴스 생성 가능
 ex) struct 구조체이름{ //필드 //메소드 }
+
 
 10. 인터페이스
 - 메소드, 이벤트, 인덱서, 프로퍼티만 가질 수 있음(인터페이스는 인스턴스 가질 수 없음 
@@ -125,7 +130,9 @@ ex) interface 인터페이스이름 {
 	반환형식 메소드이름2( 매개변수목록 );
 	//.. }
 
+
 11. 프로퍼티
+
 
 12. 컬렉션 -> 자료구조
 - using System.Collections
@@ -146,6 +153,7 @@ ex) interface 인터페이스이름 {
  - 모든 데이터 타입 처리 가능
 ex) Hashtable hashtable = new Hashtable();
 
+
 13. 일반화 프로그래밍(Generic) = 데이터 형식을 일반화 
 - 오버로딩하지 않고도 모든 형식 지원가능하도록
 - 클래스나 메소드에서 사용할 내부 데이터 타입을 컴파일 시에 미리 지정하는 방법 
@@ -160,12 +168,14 @@ CopyArray<int>(src, target);
 	- using System.Collections.Generic
 	- 대표 클래스: List<T>, Queue<T>, Stack<T>, Dictionary<TKey, TVlaue>
 
+	
 14. 예외(Exception)
 - try{ 
 	// 	
 	throw new Exception("예외를 던집니다.");
 }catch(Excetion e){ Console.WriteLine(e.Message)};
 
+	
 15. 델리게이트
 - 컴퓨터가 어떤 사건이 일어났음을 알려주면, 그 사건에 반응하는 프로그램을 만드는 방법
 - 형식: 한정자 delegate 반환형식 델리게이트이름 ( 매개변수목록 );
@@ -174,9 +184,11 @@ CopyArray<int>(src, target);
 - 익명 메소드 
 	delegate (int a, int b) { return a+b; }
 
+	
 16. 람다식
 - ex) Calculate calc = (a,b) => a+b; (형식 유추 기능 사용)
 
+	
 17. LINQ
 - from, where, orderby, select, group by, join, 
 - 모든 LINQ 쿼리식은 반드시 from 절로 시작
@@ -186,16 +198,20 @@ ex) var profiles = from profile in arrProfile
 	          orderby profile.Height ascending
 	          select new { Name = profile.Name, InchHeight = profile.Height * 0.393 };
 
+					    
 18. Reflection
 - Equals(), GetType(), ToString()
 
+					    
 19. 애트리뷰트
 
+					    
 20. Duck Typing
 - 정의된 타입이 아니더라도 정의된 타입과 같은 shape를 가지고 있다면 에러 x
 - dynamic 형식
 - 상속관계를 이용하지 않으므로 프로그램의 동작에 관여하는 부분만 수정하면 됨
 
+					    
 21. 스레드와 태스크
 - 프로세스: 실행 파일이 실행되어 메모리에 적재된 인스턴스, 하나 이상의 스레드로 구성
 - 멀티스레드 
