@@ -1,0 +1,7 @@
+C:\Users\김승주\Desktop\YKP\HCcsCode\bin\Debug\HCcsCode.exe.config
+C:\Users\김승주\Desktop\YKP\HCcsCode\bin\Debug\HCcsCode.exe
+C:\Users\김승주\Desktop\YKP\HCcsCode\bin\Debug\HCcsCode.pdb
+C:\Users\김승주\Desktop\YKP\HCcsCode\obj\Debug\HCcsCode.csprojAssemblyReference.cache
+C:\Users\김승주\Desktop\YKP\HCcsCode\obj\Debug\HCcsCode.csproj.CoreCompileInputs.cache
+C:\Users\김승주\Desktop\YKP\HCcsCode\obj\Debug\HCcsCode.exe
+C:\Users\김승주\Desktop\YKP\HCcsCode\obj\Debug\HCcsCode.pdb
